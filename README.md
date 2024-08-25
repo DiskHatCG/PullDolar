@@ -7,7 +7,7 @@ La categoria de Releases es para instalar el comando "getdolar" en la consola
 Creado gracias a la API de DolarAPI
 
 ## Requisitos
-- Una computadora con Linux, Windows o MacOS (solo Linux para el comando getdolar)
+- Una computadora con Linux o Windows (solo Linux para el comando getdolar)
 - Python 3 o superior
 - PIP (Viene ya incluido en Python for Windows)
 - Paciencia y unos mates
@@ -15,14 +15,14 @@ Creado gracias a la API de DolarAPI
 ## Instalación
 1. Descargue "latest.zip" en la sección de releases, verifique que NO sea una pre-release.
 2. Extraiga el archivo ZIP
-3. Haga click derecho y "Abrir en la terminal/consola", en Windows puede directamente abrir una terminal y escribir "cd c:/{Su usuario}/Downloads/latest/"
+3. Haga click derecho y "Abrir en la terminal/consola", en Windows puede directamente abrir una terminal y escribir `cd c:/{Su usuario}/Downloads/latest/`
    **Remplaze "{Su usuario}" con su usuario real, si no sabe cual es puede ir directamente con el explorador de archivos de Windows.**
-4. Escriba en su consola "pip -r requeriments.txt"
+4. Escriba en su consola `pip -r requeriments.txt`
 5. Espere a que se instale
 6. **En Linux, escriba**:
-   - "sudo chmod +x install.sh"
-   - "sudo install.sh"
-   **En Windows, escriba**: "main.py"
+   1. `sudo chmod +x install.sh`
+   2. `sudo install.sh`
+   **En Windows, escriba**: `main.py`
 7. Listo, ya podras utilizar PullDolar!
 
 ## Creditos
