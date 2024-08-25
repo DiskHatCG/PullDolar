@@ -16,13 +16,15 @@ Creado gracias a la API de DolarAPI
 1. Descargue "latest.zip" en la sección de releases, verifique que NO sea una pre-release.
 2. Extraiga el archivo ZIP
 3. Haga click derecho y "Abrir en la terminal/consola", en Windows puede directamente abrir una terminal y escribir `cd c:/{Su usuario}/Downloads/latest/`
+
    **Remplaze "{Su usuario}" con su usuario real, si no sabe cual es puede ir directamente con el explorador de archivos de Windows.**
-4. Escriba en su consola `pip -r requeriments.txt`
-5. Espere a que se instale
-6. **En Linux, escriba**:
+5. Escriba en su consola `pip -r requeriments.txt`
+6. Espere a que se instale
+7. **En Linux, escriba**:
    1. `sudo chmod +x install.sh`
    2. `sudo install.sh`
-   **En Windows, escriba**: `main.py`
+   
+  **En Windows, escriba**: `main.py`
 7. Listo, ya podras utilizar PullDolar!
 
 ## Creditos
