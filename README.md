@@ -28,5 +28,12 @@ Creado gracias a la API de DolarAPI
 
 9. Listo, ya podras utilizar PullDolar!
 
+## Desinstalación (Solo Linux)
+1. Haga el paso 3 de la sección instalación
+2. Escriba en la consola `sudo chmod +x uninstall.sh`
+3. Luego `sudo ./uninstall.sh`
+4. Listo, ya se borro PullDolar!
+
+
 ## Creditos
 Gracias al proyeto [DolarAPI](https://dolarapi.com/docs/).
