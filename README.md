@@ -24,8 +24,9 @@ Creado gracias a la API de DolarAPI
    1. `sudo chmod +x install.sh`
    2. `sudo install.sh`
    
-  **En Windows, escriba**: `main.py`
-7. Listo, ya podras utilizar PullDolar!
+   **En Windows, escriba**: `main.py`
+
+9. Listo, ya podras utilizar PullDolar!
 
 ## Creditos
 Gracias al proyeto [DolarAPI](https://dolarapi.com/docs/).
