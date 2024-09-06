@@ -1,28 +1,39 @@
 import requests
-global api
-cont = "DOLAR BLUE"
-contCen = cont.center(40, "-")
-try:
-    # Se conecta a la API de DolarAPI, si ocurre algo mostrara un error
-    api = requests.get("https://dolarapi.com/v1/dolares/blue")
-    print("Se obtuvo la API", end="\r")
-except:
-    print("⛔ | No se puede conectar, verifique su conexión a internet.")
-    exit()
-# Funciones obtener compra y venta.
-def obtenerCompra():
+global api, cont, uniapi
+uniapi = "https://dolarapi.com/v1/dolares/"
+def obtener(tipo, filt): # Funcion obtener
     print(f"⌛", end="\r")
+    try:
+        api = requests.get(uniapi + tipo ) # Se conecta a la API de DolarAPI, si ocurre algo mostrara un error
+        print("Se obtuvo la API", end="\r")
+    except:
+        print("⛔ | No se puede conectar, verifique su conexión a internet.")
+        exit()
     convL = api.json()
-    lFilt = convL.get("compra")
-    print("💵 | COMPRA: $" + str(lFilt))
-def obtenerVenta():
-    print(f"⌛", end="\r")
-    convL = api.json()
-    lFilt = convL.get("venta")
-    print("💵 | VENTA: $" + str(lFilt))
-# Inicio del programa
-print("🚀 | PullDolar 1.0.0 | Creado por DiskHat Computing Group")
-# Imprime el titulo centrado
-print(contCen)
-obtenerCompra()
-obtenerVenta()
+    if filt == "compra":
+        lFilt = convL.get("compra")
+        print("💵 | COMPRA: $" + str(lFilt))
+    elif filt == "venta":
+            lFilt = convL.get("venta")
+            print("💵 | VENTA: $" + str(lFilt))
+def main(): # Funcion principal (i) esto podria o va a ser optimizado usando diccionarios.
+    selec = input("¿Qué tipo de dolar desea averiguar? \n(Blue / Oficial / Bolsa / Tarjeta / Salir)\nSelección: ")
+    if selec.lower() == "blue":
+        obtener("blue", "compra")
+        obtener("blue", "venta")
+    elif selec.lower() == "oficial":
+        obtener("oficial", "compra")
+        obtener("oficial", "venta")
+    elif selec.lower() == "bolsa":
+        obtener("bolsa", "compra")
+        obtener("bolsa", "venta")
+    elif selec.lower() == "tarjeta":
+        obtener("bolsa", "compra")
+        obtener("bolsa", "venta")
+    elif selec.lower() == "salir":
+        exit()
+    else:
+        print("⛔ | El dolar", selec.lower(), "no existe.")
+        main()
+print("🚀 | PullDolar 2.0.0 | DiskHat Computing Group\n") # Inicio del programa
+main() 
